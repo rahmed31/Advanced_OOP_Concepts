@@ -113,18 +113,18 @@ files:
 - name: src/Bag.java
   visible: true
   placeholders:
-  - offset: 103
+  - offset: 252
     length: 42
     placeholder_text: "/* TODO \nInitialize the objects variable*/"
     initial_state:
       length: 42
       offset: 103
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: objects = new ArrayList<>();
-  - offset: 156
-    length: 171
+  - offset: 513
+    length: 168
     placeholder_text: "/* TODO \ncode the add method described. It should be public\
       \ and not \nreturn anything. Just take in a parameter and  throw an \nexception.\
       \ Read the documentation for this.*/"
@@ -132,7 +132,7 @@ files:
       length: 171
       offset: 156
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: |-
       public void add(T object) throws BagException{
@@ -140,7 +140,7 @@ files:
                   throw new BagException("Nulls are not allowed");
               objects.add(object);
           }
-  - offset: 330
+  - offset: 847
     length: 140
     placeholder_text: "/* TODO \nCode the drawOne method here. It should not take\
       \ any\nparameters. It should return a generic object. More on the\ntask description.*/"
@@ -148,15 +148,15 @@ files:
       length: 140
       offset: 330
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: |2-
          public T drawOne(){
               int idx = (int)Math.round(Math.random()*(objects.size()-1));
               return objects.get(idx);
           }
-  - offset: 483
-    length: 17
+  - offset: 1000
+    length: 12
     placeholder_text: /* return type?*/
     initial_state:
       length: 17
@@ -165,8 +165,8 @@ files:
     selected: false
     status: Unchecked
     encrypted_possible_answer: ArrayList<T>
-  - offset: 524
-    length: 195
+  - offset: 1209
+    length: 196
     placeholder_text: "/* TODO\nhowMany is the number of elements to draw. \nCreate\
       \ an ArrayList of the generic type and \"drawOne\" as\nmany times as you need,\
       \ putting the element drawn in the ArrayList.\nThen return it. */"
@@ -174,14 +174,14 @@ files:
       length: 195
       offset: 524
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: |2-
               ArrayList<T> result = new ArrayList<>(howMany);
               for(int i=0;i<howMany;i++)
                   result.add(this.drawOne());
               return result;
-  - offset: 799
+  - offset: 1486
     length: 88
     placeholder_text: "/* TODO \nCheck that the probability is between 0 and 1. Otherwise\n\
       throw an exception. */"
