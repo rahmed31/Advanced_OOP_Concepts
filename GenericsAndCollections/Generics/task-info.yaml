@@ -165,7 +165,7 @@ files:
     selected: true
     status: Solved
     encrypted_possible_answer: ArrayList<T>
-  - offset: 1287
+  - offset: 1286
     length: 196
     placeholder_text: "/* TODO\nhowMany is the number of elements to draw. \nCreate\
       \ an ArrayList of the generic type and \"drawOne\" as\nmany times as you need,\
@@ -181,7 +181,7 @@ files:
               for(int i=0;i<howMany;i++)
                   result.add(this.drawOne());
               return result;
-  - offset: 1494
+  - offset: 1493
     length: 87
     placeholder_text: "/* TODO \nCheck that the probability is between 0 and 1. Otherwise\n\
       throw an exception. */"
@@ -222,7 +222,7 @@ files:
 - name: src/BingoChip.java
   visible: true
   placeholders:
-  - offset: 35
+  - offset: 30
     length: 91
     placeholder_text: "/* TODO \nImplement this class.\nUse the instructions and check\
       \ how it is used in Task.java*/"

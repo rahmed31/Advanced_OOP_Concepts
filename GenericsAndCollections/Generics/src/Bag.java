@@ -37,7 +37,7 @@ task description.*/
     }
 
     public ArrayList<T> drawMany(int howMany) {
-        ArrayList<T> myObjects = new ArrayList<T>();
+        ArrayList<T> myObjects = new ArrayList<>();
 
         for (int i = 0; i < howMany; i++) {
             myObjects.add(drawOne());
