@@ -2,13 +2,12 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
-import java.util.Collections;
 
 public class Deck implements Iterable<Card>{
     private List<Card> deck;
     private final String[] suits = {"Hearts","Clubs","Diamonds","Spades"};
     private final String[] faceCards = {"Ace", "Jack", "Queen", "King"};
-    private final Random randomGenerator = new Random();
+    private static final Random randomGenerator = new Random();
 
     /* TODO
 This constructor initializes the deck variable with
@@ -16,6 +15,10 @@ all the cards of a deck, except a joker.
 The suits array may help you.*/
 
     public Deck() {
+        //What's the difference between instantiating and initializing the deck over here
+        //vs doing it up above?
+        deck = new LinkedList<Card>();
+
         for (String suit : suits) {
             for (int j = 2; j < 11; j++) {
                 deck.add(new Card<Integer, String>(j, suit));
@@ -33,10 +36,9 @@ from the bag in the previous task. The difference is that this method
 REMOVES the card from the deck */
 
     public Card dealCard() {
-//        Collections.shuffle(deck);
-//        Card myCard = deck.get(0);
 
         Card myCard = deck.get(randomGenerator.nextInt(deck.size()));
+
         deck.remove(myCard);
 
         return myCard;

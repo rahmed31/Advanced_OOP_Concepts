@@ -14,7 +14,7 @@ files:
       offset: 510
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: |-
       c : d)
                   System.out.print(c+", ");
@@ -27,7 +27,7 @@ files:
       offset: 640
     initialized_from_dependency: false
     selected: false
-    status: Failed
+    status: Solved
     encrypted_possible_answer: |2-
              int sum = 0;
               for(Card c:hand){
@@ -170,7 +170,7 @@ files:
 - name: src/Deck.java
   visible: true
   placeholders:
-  - offset: 416
+  - offset: 393
     length: 135
     placeholder_text: "/* TODO \nThis constructor initializes the deck variable with\n\
       all the cards of a deck, except a joker.\nThe suits array may help you.*/"
@@ -179,7 +179,7 @@ files:
       offset: 243
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: |2
               this.deck=new LinkedList<Card>();
               for (String suit : suits) {
@@ -189,7 +189,7 @@ files:
                   deck.add(new Card<String, String>("Jack", suit));
                   deck.add(new Card<String, String>("Queen", suit));
                   deck.add(new Card<String, String>("King", suit));
-  - offset: 878
+  - offset: 1017
     length: 180
     placeholder_text: |-
       /* TODO
@@ -201,14 +201,14 @@ files:
       offset: 421
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: |2-
               int idx = (int)Math.round(Math.random()*(deck.size()-1));
               if (deck.size()>0)
                   return deck.remove(idx);
               else
                   return null;
-  - offset: 1297
+  - offset: 1363
     length: 68
     placeholder_text: '/* TODO: Return the size of the deck (number of cards left
       in it)*/'
@@ -217,11 +217,11 @@ files:
       offset: 628
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: |2-
 
               return this.deck.size();
-  - offset: 1433
+  - offset: 1499
     length: 75
     placeholder_text: "/* TODO \nReturn a new DeckIterator with this instance in the\
       \ constructor.*/"
@@ -230,7 +230,7 @@ files:
       offset: 762
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: ' return new DeckIterator<Card>(this);'
   text: "import java.util.Iterator;\nimport java.util.LinkedList;\nimport java.util.List;\n\
     \npublic class Deck implements Iterable<Card>{\n    private List<Card> deck;\n\
@@ -258,7 +258,7 @@ files:
       offset: 57
     initialized_from_dependency: false
     selected: false
-    status: Failed
+    status: Solved
     encrypted_possible_answer: implements Iterator<E>
   - offset: 143
     length: 37
@@ -270,7 +270,7 @@ files:
       offset: 148
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: '        this.d = d;'
   - offset: 249
     length: 61
@@ -282,7 +282,7 @@ files:
       offset: 244
     initialized_from_dependency: false
     selected: false
-    status: Failed
+    status: Solved
     encrypted_possible_answer: ' return d.size()>0;'
   - offset: 401
     length: 37
@@ -294,7 +294,7 @@ files:
       offset: 357
     initialized_from_dependency: false
     selected: true
-    status: Failed
+    status: Solved
     encrypted_possible_answer: return (E) this.d.dealCard();
   text: |
     import java.util.Iterator;
@@ -320,8 +320,8 @@ files:
         }
     }
   learner_created: false
-status: Failed
+status: Solved
 feedback:
-  message: Incorrect
-  time: Sun, 27 Feb 2022 19:45:36 UTC
+  message: Congratulations!
+  time: Mon, 28 Feb 2022 07:12:24 UTC
 record: -1
