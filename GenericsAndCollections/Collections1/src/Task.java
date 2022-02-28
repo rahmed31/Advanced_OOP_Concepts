@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Task {
-    private static HashMap<String, Integer> myMap = new HashMap<>();
+    private static final HashMap<String, Integer> myMap = new HashMap<>();
 
     static {
         myMap.put("Ace", 1);
