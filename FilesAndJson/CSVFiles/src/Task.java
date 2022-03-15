@@ -21,7 +21,6 @@ Create a byte array of about 1024 bytes or however many bytes you want. */
 Create a while loop to read the contents of the file and put them in the variable "contents" declared at the beginning of the method. */
             while((lengthRead = in.read(buffer)) > 0) {
                 out.write(buffer, 0, lengthRead);
-                out.write('\n');
                 out.flush();
             }
         /* TODO

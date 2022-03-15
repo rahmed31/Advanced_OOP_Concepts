@@ -33,11 +33,12 @@ This constructor should take the contents of a CSV file and initialize the membe
     public Database(String contents) {
         String[] table = contents.split("\n");
 
-        this.colNames = table[0].split(" ");
+        this.colNames = table[0].split(",");
         this.numRows = table.length - 1;
+        int j = 0;
 
-        for (int i = 1; i < table.length; i++) {
-            data[i-1] = table[i].split(" ");
+        for (int i = 0; i < table.length; i++) {
+            data[j++] = table[i+1].split(",");
         }
 
     }
