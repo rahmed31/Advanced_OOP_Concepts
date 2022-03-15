@@ -14,13 +14,13 @@ public class Task {
     }
 
     public String readFile(String filename) {
-        String contents = "";
+        StringBuilder contents = new StringBuilder();
 
         try (BufferedReader in = new BufferedReader(new FileReader(filename))) {
             String line;
 
             while((line = in.readLine()) != null) {
-                contents += line;
+                contents.append(line);
             }
         } catch (FileNotFoundException e) {
             System.out.println("No file found.");
@@ -29,8 +29,7 @@ public class Task {
             System.exit(-1);
         }
 
-        System.out.println(contents);
-        return contents;
+        return contents.toString();
     }
 
    /* TODO: create a JSON object with the contents of "filename".
@@ -38,12 +37,9 @@ public class Task {
        /* Put in the variable that should be returned. */
 
     public JsonObject readJson(String filename) {
-
         String json = readFile(filename);
 
-        JsonObject document = (JsonObject) Jsoner.deserialize(json, new JsonObject());
-
-        return document;
+        return Jsoner.deserialize(json, new JsonObject());
     }
 
 }

@@ -10,7 +10,7 @@ be EASILY set from the constructor. */
         /* TODO 
 set the member variable declared above.*/
     public Database(JsonObject data) {
-        myReviewSet = data;
+        this.myReviewSet = data;
     }
 
         /* TODO
@@ -20,11 +20,9 @@ Complete this method as specified. */
 
         JsonObject myRestaurant = null;
 
-        for (int i = 0; i < restaurants.size(); i++) {
-            JsonObject restaurant = (JsonObject) restaurants.get(i);
-
-            if (restaurant.get("name").equals(name)) {
-                myRestaurant = restaurant;
+        for (Object restaurant:restaurants) {
+            if (((JsonObject)restaurant).get("name").equals(name)) {
+                myRestaurant = (JsonObject) restaurant;
             }
         }
 
@@ -34,20 +32,17 @@ Complete this method as specified. */
         /* TODO 
 Complete this method as specified.
  The previous method may be of help. */
-    public Double getAvgReviews(String name){
+    public double getAvgReviews(String name){
         JsonObject myRestaurant = getRestaurant(name);
 
         JsonArray myReviews = (JsonArray) myRestaurant.get("reviews");
 
         double sum = 0;
-        double count = 0;
 
-        for (int i = 0; i < myReviews.size(); i++) {
-            JsonObject review = (JsonObject) myReviews.get(i);
-            sum += (double)review.get("rating");
-            count ++;
+        for (Object review:myReviews) {
+            sum += Integer.parseInt(String.valueOf(((JsonObject)review).get("rating")));
         }
 
-        return sum/count;
+        return sum/myReviews.size();
     }
 }
