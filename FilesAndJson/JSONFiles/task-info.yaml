@@ -3,20 +3,20 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 570
-    length: 122
+  - offset: 1052
+    length: 128
     placeholder_text: '/* TODO: create a JSON object with the contents of  "filename".
       You can use the method below to help you read the file. */'
     initial_state:
       length: 122
       offset: 570
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Failed
     encrypted_possible_answer: |-
       lename) {
               JsonObject obj = (JsonObject) Jsoner.deserialize(readFile(filename), new JsonObject());
-  - offset: 700
+  - offset: 1188
     length: 50
     placeholder_text: /* Complete this using the parameter passed to this method.
       */
@@ -24,8 +24,8 @@ files:
       length: 50
       offset: 700
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Failed
     encrypted_possible_answer: |2-
        return obj;
           }
@@ -42,7 +42,7 @@ files:
               } catch(IOException e) {
                   e.printStackTrace();
                   Syst
-  - offset: 700
+  - offset: 1188
     length: 50
     placeholder_text: /* Put in code to read the file line by line. */
     initial_state:
@@ -50,10 +50,10 @@ files:
       offset: 700
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: /* Complete this using the parameter passed to this
       method. */
-  - offset: 700
+  - offset: 1188
     length: 50
     placeholder_text: /* Put in the variable that should be returned. */
     initial_state:
@@ -61,7 +61,7 @@ files:
       offset: 700
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: /* Put in code to read the file line by line. */
   text: |-
     import com.github.cliftonlabs.json_simple.JsonObject;
@@ -161,28 +161,28 @@ files:
       length: 83
       offset: 136
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Failed
     encrypted_possible_answer: public JsonObject data;
-  - offset: 267
+  - offset: 257
     length: 50
     placeholder_text: "/* TODO \nset the memebr variable declared above.*/"
     initial_state:
       length: 50
       offset: 267
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Failed
     encrypted_possible_answer: this.data = data;
-  - offset: 383
-    length: 46
+  - offset: 390
+    length: 45
     placeholder_text: "/* TODO \nComplete this method as specified. */"
     initial_state:
       length: 46
       offset: 383
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Failed
     encrypted_possible_answer: |-
       JsonArray rests = (JsonArray)this.data.get("restaurants");
               int i=0;
@@ -193,16 +193,16 @@ files:
                   return null;
               else
                   return result;
-  - offset: 491
-    length: 84
+  - offset: 896
+    length: 83
     placeholder_text: "/* TODO \nComplete this method as specified.\n The previous\
       \ method may be of help. \n*/"
     initial_state:
       length: 84
       offset: 491
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Failed
     encrypted_possible_answer: |-
       JsonObject result = getRestaurant(name);
               JsonArray reviews = (JsonArray) result.get("reviews");
@@ -616,5 +616,9 @@ files:
       }]
     }
   learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: class java.math.BigDecimal cannot be cast to class java.lang.Double (java.math.BigDecimal
+    and java.lang.Double are in module java.base of loader &#39;bootstrap&#39;)
+  time: Tue, 15 Mar 2022 05:35:39 UTC
 record: -1
