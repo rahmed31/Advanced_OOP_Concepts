@@ -3,7 +3,7 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 64
+  - offset: 19
     length: 176
     placeholder_text: |-
       /* TODO */
@@ -12,8 +12,8 @@ files:
       length: 176
       offset: 64
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |2-
               Person p = new Person("Kim Possible","2000-01-01");
               p.setPosition("Associate", 34000);
@@ -102,7 +102,7 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 62
+    length: 1149
     placeholder_text: |-
       /* TODO */
       Copy the Person class from Task 2 here. Copy->Paste
@@ -110,8 +110,8 @@ files:
       length: 62
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |
       import java.time.LocalDate;
       import java.time.Period;
@@ -169,7 +169,7 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 73
+    length: 30
     placeholder_text: |-
       /* TODO */
       The imports will self populate. You don't have to do anything.
@@ -177,15 +177,15 @@ files:
       length: 73
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       import java.util.ArrayList;
       import java.util.Comparator;
       import java.util.List;
       import java.util.PriorityQueue;
-  - offset: 97
-    length: 92
+  - offset: 54
+    length: 91
     placeholder_text: |-
       /* TODO */
       Copy the two inner classes of Resume exactly as they were in Task 2. Copy->paste.
@@ -193,8 +193,8 @@ files:
       length: 92
       offset: 97
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |2
           public class Education{
               String school;
@@ -223,7 +223,7 @@ files:
                   return fromYear+" - "+toYear+":"+title;
               }
           }
-  - offset: 190
+  - offset: 145
     length: 73
     placeholder_text: |-
       /* TODO */
@@ -232,11 +232,11 @@ files:
       length: 73
       offset: 190
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: '    private Person p;'
-  - offset: 264
-    length: 80
+  - offset: 219
+    length: 79
     placeholder_text: |-
       /* TODO */
       Create a List to hold values of type Education (exactly as in task 2)
@@ -245,10 +245,10 @@ files:
       offset: 264
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '    private List<Education> ed;'
-  - offset: 345
-    length: 72
+  - offset: 299
+    length: 71
     placeholder_text: |-
       /* TODO */
       Create a Priority Queue that holds values of type Experience.
@@ -257,9 +257,9 @@ files:
       offset: 345
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '    private PriorityQueue<Experience> ex;'
-  - offset: 447
+  - offset: 370
     length: 49
     placeholder_text: |-
       /* TODO */
@@ -269,10 +269,10 @@ files:
       offset: 447
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '        this.p = p;'
-  - offset: 497
-    length: 54
+  - offset: 420
+    length: 53
     placeholder_text: |-
       /* TODO */
       Initialize the List with Education objects.
@@ -281,10 +281,10 @@ files:
       offset: 497
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '        ed = new ArrayList<>();'
-  - offset: 552
-    length: 131
+  - offset: 474
+    length: 130
     placeholder_text: |-
       /* TODO */
       Initialize the priority queue with a comparator defined in an anonymous inner class. Check the specs for the comparator.
@@ -292,8 +292,8 @@ files:
       length: 131
       offset: 552
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |2-
               ex = new PriorityQueue<>(new Comparator<Experience>() {
                   @Override
@@ -301,8 +301,8 @@ files:
                       return t1.toYear - experience.toYear;
                   }
               });
-  - offset: 691
-    length: 103
+  - offset: 606
+    length: 102
     placeholder_text: |-
       /* TODO */
       Add a standard getter for the experiences. getExperience. it should return a priority queue.
@@ -311,9 +311,9 @@ files:
       offset: 691
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '    public PriorityQueue getExperience(){return ex;}'
-  - offset: 796
+  - offset: 710
     length: 131
     placeholder_text: |-
       /* TODO */
@@ -322,8 +322,8 @@ files:
       length: 131
       offset: 796
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |2-
           public void addEducation(Education e){
               ed.add(e);
@@ -375,5 +375,8 @@ files:
 
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 10 Apr 2022 06:06:14 UTC
 record: -1
